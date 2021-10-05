@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-tap-highlight-color:rgba(0,0,0,0); 
+}
+a{color: white;text-decoration: none;}
+a:active{color: white;}
+a:focus { outline:none; -moz-outline:none;}
+body{
+    color: white;
+    background-color:#203;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,miui,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+
+.swiper-container {
+    background-color: #203;
+    width: 100%;
+    height: auto;
+}
+.swiper-slide img{
+    width: 100%;
+    height: auto;
+}
+
+.notice{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.notice .iconfont{font-size: 22px;padding:0 10px;}
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 40s linear infinite;
+}
+.marquee:hover {
+    animation-play-state: paused
+}
+@keyframes marquee {
+    0% {
+        text-indent: 0em
+    }
+    100% {
+        text-indent: -1120px
+    }
+}
+
+
+
+.tabs{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: scroll;
+    padding-left: 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.tabs::-webkit-scrollbar{width: 0;padding:0;height: 0;}
+.tabs .tab-item{
+    display: inline-block;
+    margin-right: 1rem;
+    border-radius: 1.3rem;
+    padding:.2rem 1rem;
+    background-color: #3c1f4d;
+}
+.tabs .tab-item.tab-item-active{
+    background: linear-gradient(90deg,red,#00f);
+}
+
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    width: calc( 100% - 20px);
+    flex-wrap: wrap;
+    padding:10px;
+}
+.list .list-item{width:calc(( 100% ) / 2);color: white;background-color: #3c1f4d;padding-bottom: 10px;margin-bottom:10px;border-radius: 5px;overflow: hidden;}
+.list .list-item:nth-of-type(even){width:calc(( 100% - 20px) / 2);margin-left:10px;}
+.list .list-item .img-box{position: relative;}
+.list .list-item .img-box img{width: 100%;height: 230px;}
+.list .list-item .img-box .left-top{position: absolute;left:0;top:0;background: linear-gradient(90deg,#1629db,#e060ff);padding:2px 10px;border-bottom-right-radius: 5px;}
+.list .list-item .img-box .right-bottom{position: absolute;right:0;bottom:0;padding:10px;}
+.list .list-item .info-box{
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.header{width: 100%;height: 44px;position: fixed; top:0;left:0;z-index: 101;background-color: #203;}
+.header .back-icon{position: absolute;top:0;left:0;z-index: 100; transform: rotateY(180deg);font-size: 22px;width: 32px;height: 44px;line-height: 44px;}
+.header h2{width: 100%;text-align: center;font-weight: normal;line-height: 44px;font-size: 17px;}
+.detail-swiper{margin-top:44px;}
+.detail-swiper img,.detail-swiper video{width:100vw;height: 100vw;}
+.detail-body{padding:20px;}
+.detail-body *{margin-bottom: 10px;}
+.detail-body p{color: rgb(165, 146, 168);font-size: 15px;}
+.detail-body .share-box{
+    display: flex;
+    justify-content: space-between;
+    height: 52px;
+}
+.detail-body .share-box .share-contact{
+    background-image: linear-gradient(90deg, rgb(0, 92, 255) 0px, rgb(1, 185, 255));
+    padding:10px 40px;
+    border-radius: 20px;
+}
+.detail-body .share-box .share-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.detail-body .share-box .share-item span{
+    font-size: 14px;
+}
+.detail-body .share-box .share-item .iconfont{
+    font-size: 22px;
+}
+.detail-body .share-box .share-item .iconfont.icon-hongxin{
+    color: red;
+}
+.detail-body{}
+.dialog-mark{
+    display: none;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+}
+.dialog-alert {
+    display: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    z-index: 103;
+    width: 50%;
+    background-color: white;
+    color: black;
+    margin-left:-25%;
+    margin-top:-40px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+.dialog-alert .dialog-content{padding:20px;}
+.dialog-alert .dialog-button{
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(90deg,#0d37ff,#e562fe);
+    line-height: 40px;
+}
+
+
+
+/* 弹窗按钮渐变background-image: linear-gradient(90deg,#0d37ff,#e562fe); */
+
